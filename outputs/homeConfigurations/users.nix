@@ -1,5 +1,5 @@
 {
-  "verz@acheron" = {
+  "helioscq@acheron" = {
     groups = ["wheel"];
   };
 }

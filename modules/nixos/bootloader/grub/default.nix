@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: let
+{ pkgs, lib, config, ... }: let
   moduleName = "grub";
 in {
   options.${moduleName}.enableModule = lib.mkOption {
@@ -19,12 +14,20 @@ in {
 
       grub = let
         extraEntries = ''
+          menuentry "Windows 11" {
+            insmod part_gpt
+            insmod fat
+            insmod chain
+            search --file --no-floppy --set=root /EFI/Microsoft/Boot/bootmgfw.efi
+            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+          }
+
           menuentry "Reboot" --class restart {
-          	reboot
+            reboot
           }
 
           menuentry "Shutdown" --class shutdown {
-          	halt
+            halt
           }
         '';
       in {
@@ -32,16 +35,15 @@ in {
         configurationLimit = lib.mkDefault 10;
         theme = lib.mkDefault pkgs.minimal-grub-theme;
 
-        useOSProber = lib.mkDefault true;
+        useOSProber = lib.mkForce false;
         efiSupport = lib.mkDefault true;
         device = lib.mkDefault "nodev";
 
         backgroundColor = lib.mkOverride 999 "#000000";
         splashImage = lib.mkOverride 999 null;
 
-        extraInstallCommands = lib.mkDefault ''
-          echo "${extraEntries}" >> /boot/grub/grub.cfg
-        '';
+        extraEntries = lib.mkOverride 999 extraEntries;
+
       };
     };
   };

@@ -64,7 +64,6 @@
     settings = {
       experimental-features = lib.mkDefault ["flakes" "nix-command" "pipe-operators"];
       flake-registry = lib.mkDefault "";
-
       auto-optimise-store = lib.mkDefault true;
 
       # https://github.com/NixOS/nix/issues/9574

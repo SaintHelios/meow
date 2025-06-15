@@ -17,7 +17,7 @@ in {
           extraSpecialArgs = {
             # pkgs passed by default
             spkgs = inputs.nixpkgs-stable.legacyPackages.${(getHost username).system};
-
+            zenBrowser = inputs."zen-browser".packages.${(getHost username).system}.default;
             modules = ../../modules/home-manager;
 
             username = lib.elemAt (lib.splitString "@" username) 0;

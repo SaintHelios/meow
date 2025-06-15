@@ -9,6 +9,14 @@ lib: {
     "desc:Vestel Elektronik Sanayi ve Ticaret A. S. 24W_LCD_TV,1920x1080@60,-1400x-1440,1,transform,1"
   ];
 
+{
+  wayland.windowManager.hyprland = {
+    enable = true;
+    extraConfig = ''
+      exec-once = waybar
+    '';
+  };
+
   general = lib.mkDefault {
     gaps_in = lib.mkDefault 5;
     gaps_out = lib.mkDefault 10;
@@ -116,6 +124,7 @@ lib: {
     "$mainMod,       F, togglefloating,"
     "$mainMod,       P, pseudo,"
     "$mainMod,       J, togglesplit,"
+    "$mainMod,       D, exec, wofi --show drun --allow-images"
 
     # Moving focus
     "$mainMod, H, movefocus, l"

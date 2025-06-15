@@ -21,9 +21,13 @@ in {
         })
       ];
 
-      initContent = ''
+      initExtra = ''
         bindkey "^H" backward-kill-word
         bindkey "5~" kill-word
+
+        if [[ -z $DISPLAY && $(tty) = /dev/tty1 ]]; then
+          exec Hyprland
+        fi
       '';
 
       history = {
