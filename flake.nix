@@ -21,7 +21,7 @@
     };
 
     hyprland.url = "github:hyprwm/Hyprland/main";
-
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,5 +32,5 @@
     };
   };
 
-  outputs = inputs: import ./outputs inputs;
+outputs = inputs: import ./outputs inputs;
 }
