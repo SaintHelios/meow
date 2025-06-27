@@ -4,6 +4,10 @@
     waybar
     neofetch
     fuzzel
+    ags
+    rofi
+    cage
+    greetd.gtkgreet
   ];
 
   fonts.packages = with pkgs; [

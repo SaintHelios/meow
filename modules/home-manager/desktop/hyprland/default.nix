@@ -7,6 +7,10 @@
 }: let
   moduleName = "hyprland";
 in {
+
+  imports = [
+    ./hyprpaper.nix
+  ];
   config = lib.mkIf config."hyprland".enableModule {
     home.file = {
       ".config/uwsm/env" = {
@@ -24,8 +28,8 @@ in {
     wayland.windowManager.hyprland = {
       enable = lib.mkForce true;
 
-      settings = import ./hyprland.nix lib;
-
+ 	settings = import ./hyprland.nix lib;
+ 
       systemd.enable = lib.mkForce false; # Required for Hyprland UWSM
       package = lib.mkDefault inputs.hyprland.packages.${host.system}.hyprland;
     };

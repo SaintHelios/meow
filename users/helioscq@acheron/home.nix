@@ -1,6 +1,7 @@
 { modules, pkgs, zenBrowser, inputs, ... }: {
   imports = [
-
+    "${modules}/desktop/hyprland"
+	
     "${modules}/shell/zsh"
     "${modules}/shell/starship"
     
@@ -15,6 +16,7 @@
     "${modules}/programs/spotify"
     "${modules}/programs/zen-browser"
     "${modules}/programs/discord"
+
   ];
 }
 

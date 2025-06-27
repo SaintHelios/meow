@@ -33,7 +33,7 @@ in {
       in {
         enable = lib.mkForce true;
         configurationLimit = lib.mkDefault 10;
-        theme = lib.mkDefault pkgs.minimal-grub-theme;
+        theme = lib.mkDefault pkgs.catppuccin-grub;
 
         useOSProber = lib.mkForce false;
         efiSupport = lib.mkDefault true;

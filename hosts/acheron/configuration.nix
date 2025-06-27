@@ -7,6 +7,7 @@
 
     "${modules}/services/clamav"
     "${modules}/bootloader/grub"
+    
   ];
 
   services.xserver.enable = true;

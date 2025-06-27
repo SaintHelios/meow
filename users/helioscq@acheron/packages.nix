@@ -4,5 +4,7 @@
     firefox
     unimatrix
     hyprpaper
+    ags
+    rofi
   ];
 }
