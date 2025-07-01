@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    hyprland
+    xwayland
     wofi
     waybar
     neofetch

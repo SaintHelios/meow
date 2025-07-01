@@ -1,0 +1,14 @@
+[style]
+background_color = "black"
+foreground_color = "white"
+highlight_color = "cyan"
+error_color = "red"
+
+[font]
+family = "monospace"
+size = 12
+
+[layout]
+welcome_text = "Welcome to Hyprland!"
+show_asterisks = true
+show_user_menu = true

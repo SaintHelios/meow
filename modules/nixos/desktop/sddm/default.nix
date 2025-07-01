@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   services.xserver = {
@@ -7,22 +7,23 @@
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      theme = "catppuccin-mocha";
+      theme = "chili";
       package = pkgs.kdePackages.sddm;
     };
-
+    
     displayManager.defaultSession = "hyprland-uwsm";
   };
 
+  # Provide the hyprland session file with absolute Exec path
+  environment.etc."xdg/wayland-sessions/hyprland-uwsm.desktop".text = ''
+    [Desktop Entry]
+    Name=Hyprland (UWSM)
+    Comment=Hyprland Wayland Session (UWSM)
+    Exec=${pkgs.hyprland}/bin/Hyprland
+    Type=Application
+    DesktopNames=Hyprland
+  '';
+
   programs.hyprland.enable = true;
 
-  environment.systemPackages = [
-    (pkgs.catppuccin-sddm.override {
-      flavor = "mocha";
-      font  = "Noto Sans";
-      fontSize = "9";
-      background = "${./wallhaven-od9lzm_1920x1080.png}";
-      loginBackground = true;
-    })
-  ];
 }
