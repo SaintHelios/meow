@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  wallpaper = "/home/helioscq/Downloads/wallhaven-6lkdmq_1920x1080.png";
+  wallpaper = "/home/helioscq/Downloads/wallhaven-5yd6d5_1920x1080.png";
 in {
   home.packages = [ pkgs.hyprpaper ];
 

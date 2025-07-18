@@ -5,6 +5,7 @@
     unimatrix
     hyprpaper
     ags
+    wofi
     rofi
     pywal
     hyprcursor

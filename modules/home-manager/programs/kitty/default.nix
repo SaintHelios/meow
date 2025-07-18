@@ -17,6 +17,8 @@ in {
 
       settings = {
         cursor_trail = lib.mkDefault 1;
+        dynamic_background_opacity = true;
+        background_opacity = "0.5";
       };
     };
   };
