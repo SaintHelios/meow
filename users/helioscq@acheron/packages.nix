@@ -8,6 +8,7 @@
     rofi
     pywal
     hyprcursor
+    swaynotificationcenter
     rose-pine-hyprcursor
   ];
 }
