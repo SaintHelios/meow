@@ -16,7 +16,8 @@
     "${modules}/programs/spotify"
     "${modules}/programs/zen-browser"
     "${modules}/programs/discord"
-
+    "${modules}/programs/waybar"
+    "${modules}/programs/rofi"
   ];
 }
 

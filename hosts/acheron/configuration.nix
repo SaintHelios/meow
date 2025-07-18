@@ -15,9 +15,8 @@
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.displayManager.sddm.wayland.enable = true;
 
-services.xserver.displayManager.sddm.package = pkgs.kdePackages.sddm;
-
-  programs.hyprland.enable = true;  # <-- keep this here directly 
+  time.timeZone = "Europe/Helsinki";
+ 
  
   # You can uncomment and customize console font packages here if you want
   # console = {

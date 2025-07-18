@@ -9,6 +9,7 @@ lib: {
 
   exec-once = [
   "hyprpaper"
+  "waybar"
   ];
 
   general = lib.mkDefault {

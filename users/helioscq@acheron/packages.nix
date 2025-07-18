@@ -6,5 +6,8 @@
     hyprpaper
     ags
     rofi
+    pywal
+    hyprcursor
+    rose-pine-hyprcursor
   ];
 }

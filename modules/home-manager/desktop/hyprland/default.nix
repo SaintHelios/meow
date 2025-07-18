@@ -10,6 +10,7 @@ in {
 
   imports = [
     ./hyprpaper.nix
+    ./hyprcursor
   ];
   config = lib.mkIf config."hyprland".enableModule {
     home.file = {
