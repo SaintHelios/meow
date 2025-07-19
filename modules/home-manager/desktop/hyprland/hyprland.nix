@@ -30,7 +30,7 @@ lib: {
   };
 
   decoration = lib.mkDefault {
-    rounding = lib.mkDefault 0;
+    rounding = lib.mkDefault 15;
 
     active_opacity = lib.mkDefault 1.0;
     inactive_opacity = lib.mkDefault 1.0;
@@ -41,7 +41,11 @@ lib: {
 
   animations = lib.mkDefault {
     enabled = lib.mkDefault true;
-
+    
+  env = [
+       "HYPRSHOT_DIR,/home/helioscq/Pictures/Screenshots"
+      ];
+   
     bezier = [
       "linear, 0, 0, 1, 1"
       "md3_standard, 0.2, 0, 0, 1"
@@ -119,6 +123,10 @@ lib: {
     "$mainMod, J, movefocus, d"  # Keeping J here for focus move
     "$mainMod, R, exec, rofi -show drun"
 
+    # Screenshot client
+    "$mainMod, P, exec, hyprshot -m region"   
+    "$mainMod, F6, exec, hyprshot -m window" 
+
     # Workspaces
     "$mainMod, 1, workspace, 1"
     "$mainMod, 2, workspace, 2"
@@ -138,7 +146,7 @@ lib: {
     "$mainMod SHIFT, K, resizeactive, 0 -60"
     "$mainMod SHIFT, J, resizeactive, 0 60"
 
-    # Monitor focus switching (consider simplifying these if needed)
+    # Monitor focus switching 
     "$mainMod ALT SHIFT, 1, focusmonitor, desc:Chimei Innolux Corporation 0x1521"
     "$mainMod ALT SHIFT, 2, focusmonitor, desc:Microstep MSI G27CQ4 0x000008D3"
     "$mainMod ALT SHIFT, 3, focusmonitor, desc:Vestel Elektronik Sanayi ve Ticaret A. S. 24W_LCD_TV"
