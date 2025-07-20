@@ -3,6 +3,8 @@
     hyprland
     xwayland
     wofi
+    vim
+    neovim
     waybar
     neofetch
     fuzzel
