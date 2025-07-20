@@ -113,7 +113,7 @@ lib: {
     "$mainMod,       C, killactive,"
     "$mainMod,       M, exit,"
     "$mainMod,       F, togglefloating,"
-    "$mainMod,       P, pseudo,"
+    "$mainMod,       L, pseudo,"
     "$mainMod,       Y, togglesplit,"  # Changed from J to Y to avoid conflict
 
     # Moving focus

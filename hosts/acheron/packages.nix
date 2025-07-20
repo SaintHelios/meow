@@ -13,6 +13,7 @@
     pkgs.bibata-cursors
     pkgs.catppuccin-sddm
     pkgs.sddm-astronaut
+    gcc
     greetd.gtkgreet
   ];
 

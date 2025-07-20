@@ -1,5 +1,8 @@
 { pkgs, inputs, ... }: {
   home.packages = with pkgs; [
+    file
+    unzip
+    ghidra
     hyprshot
     neovim
     firefox
