@@ -1,6 +1,6 @@
 {
   description = ''
-    verz's system @ https://github.com/verziet/system
+         THE UNHOLY THE UNSTABLE
   '';
 
   inputs = {
