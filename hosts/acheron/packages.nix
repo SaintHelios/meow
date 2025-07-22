@@ -11,10 +11,6 @@
     ags
     rofi
     cage
-    pkgs.sddm-chili-theme
-    pkgs.bibata-cursors
-    pkgs.catppuccin-sddm
-    pkgs.sddm-astronaut
     gcc
     greetd.gtkgreet
   ];
