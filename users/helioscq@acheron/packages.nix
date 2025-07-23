@@ -15,7 +15,6 @@
     pywal
     hyprcursor
     swaynotificationcenter
-    tofi
     rose-pine-hyprcursor
   ];
 }
